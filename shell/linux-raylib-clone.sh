@@ -1,3 +1,10 @@
+if [ -f ./raylib/ ]; then
+    echo -e "\nfile already exist"
+else
+    echo -e "\nCreating file ./Raylib/"
+    mkdir ./raylib/
+fi
+
 cd ./raylib/
 msg="1 package is needed. Would you like to download it (Y/n) :"
 echo "$msg"
