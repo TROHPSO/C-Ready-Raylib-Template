@@ -1,5 +1,5 @@
 ### Raylib With C Ready Template
-by **TROHPSO** - [My Github](https://github.com/TROHPSO),
+Template made by **TROHPSO** - [My Github](https://github.com/TROHPSO),
 made with love and no Ai (for fun)
 
 Work for **Linux** & **Windows**
