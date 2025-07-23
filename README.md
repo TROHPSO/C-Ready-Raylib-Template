@@ -20,7 +20,7 @@ Don't forget to follow and support **Ray**
 
 ### VS Code Setup :
 #### For Linux users :
-* Donwload C runner & GCC compiler :
+* Download C runner & GCC compiler :
 ```bash
 sudo apt update && apt upgrade
 sudo apt install build-essential
@@ -30,6 +30,7 @@ gcc -v
 #### For Windows users :
 * Make sure you have MSYS2 on your machine With MINGW64.
     * Follow this tutorial if you don't : [How to Install C and C++ compiler...](https://youtu.be/-gxwT-eAfvU?si=CLiBmrQ5Qf29Up4f)
+    * Install make, you can download it here [With Scoop package manager](https://scoop.sh/#/apps?q=make)
 
 
 ## Setup - Clone Raylib & Compile 
@@ -46,7 +47,8 @@ gcc -v
 2. **Compile your project :**
 
 * Again, at your **root** project directory. Add permission to run the script  with ``chmod +x ./shell/compile.sh `` 
-    * Run this script from the [./shell/compile.sh](./shell/compile.sh) directory : ``./compile.sh``
+    * Run this script from the [./shell/compile.sh](./shell/compile.sh) directory : ``./shell/compile.sh``
+    * Or use ``make linux`` on your terminal
     * /!\ A Window should appear.
     
 ### Windows - Clone Raylib & Compile 
@@ -61,5 +63,6 @@ gcc -v
 * In your terminal :
     * Run ``.\shell\compile.bat``
         * Or, press ``F5`` on your keyboard make sure you already did the step 1 first.
+        * Or use ``make windows``
         * /!\ A Window should appear. 
 > if you see any problem with VS Code relaunch it. 
