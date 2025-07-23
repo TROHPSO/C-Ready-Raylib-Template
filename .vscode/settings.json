@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "main.C": "cpp"
+        "raymath.h": "c",
+        "stdio.h": "c"
     }
 }
