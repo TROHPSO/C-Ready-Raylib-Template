@@ -10,82 +10,56 @@ Don't forget to follow and support **Ray**
 - https://raysan5.itch.io/raylib
 
 ---
-### VS Code - configuration : 
-Installation de [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack)
+### About this template 
 
-### Installation de C
-#### Sous Linux :
-Installation :
-```
+- This template will generate a **bin/** folder with executable, a **raylib/** folder with the necessary "header.h".
+- Ready compilation environnement and it's lighweight.
+- Cross-compilation supports (i'm working on it).
+
+## Prerequisites
+
+### VS Code Setup :
+#### For Linux users :
+* Donwload C runner & GCC compiler :
+```bash
 sudo apt update && apt upgrade
 sudo apt install build-essential
 gcc -v
 ```
-#### Sous Windows :
-[Vidéo - installation de C :](https://youtu.be/-gxwT-eAfvU)
+
+#### For Windows users :
+* Make sure you have MSYS2 on your machine With MINGW64.
+    * Follow this tutorial if you don't : [How to Install C and C++ compiler...](https://youtu.be/-gxwT-eAfvU?si=CLiBmrQ5Qf29Up4f)
 
 
-### Clonage de Raylib
-Toujours à la raçine du projet
+## Setup - Clone Raylib & Compile 
 
-Windows :
-```bash
-.\shell\windows-raylib-clone.bat
-```
+### Linux :
+1. **Clone Raylib :**
 
-Linux : 
-```sh
-./shell/linux-raylib-clone.sh
-```
+* Add **Raylib** to your directory :
+    * Open your terminal from your project :
+    * At your root project directory **run** : ``chmod +x ./shell/linux-raylib-clone``
+    * Then run ``./shell/linux-raylib-clone.sh``
+    * If any errors appears you can download it manually from [https://github.com/raysan5/raylib/releases/tag/5.5](https://github.com/raysan5/raylib/releases/download/5.5/raylib-5.5_linux_amd64.tar.gz), put it in [./raylib/raylib-master/](./raylib/raylib-master/)
 
-**Vérification de l'existence de Raylib dans [./raylib/](./raylib/).**  
+2. **Compile your project :**
 
-Alternative installation manuelle :
-- Télécharger ici : https://github.com/raysan5/raylib/releases
-- Décompréssé le fichier dans raylib/raylib-master
-
-
-### Fenêtre basique
-Copier et coller le corps suivant dans [./src/main.c](./src/main.c) si ce n'est pas dèja fait
-
-```c
-#include <stdio.h>
-#include <raylib.h>
-
-int main(void)
-{
-    printf("> OK SA FONCTIONNE !! \n");
+* Again, at your **root** project directory. Add permission to run the script  with ``chmod +x ./shell/compile.sh `` 
+    * Run this script from the [./shell/compile.sh](./shell/compile.sh) directory : ``./compile.sh``
+    * /!\ A Window should appear.
     
-    InitWindow(800,450, "Raylib Template");
+### Windows - Clone Raylib & Compile 
 
-    while (!WindowShouldClose())
-    {
-         BeginDrawing();
-            ClearBackground(RAYWHITE);
-            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-        EndDrawing();
-    }
+1. **Add Raylib :**
 
-    CloseWindow();
+* Open terminal :
+    * Run this command ``.\shell\windows-raylib-clone.bat``, wait for couple of seconds.
 
-    return 0;
-}
-```
+2. **Compile your project :**
 
-### Compilé le projet
-Sous Windows : 
-```bash
-.\shell\compile.bat
-```
-
-Sous Linux :
-```sh
-./shell/compile.sh
-```
-
-**Fichier de l'exécutable dans [./bin](./bin/).**
-
-> Si la compilation est réussi le message s'affiche
-`> OK SA FONCTIONNE !!`
-*(mais surtout une fenetre s'afficher)*
-
+* In your terminal :
+    * Run ``.\shell\compile.bat``
+        * Or, press ``F5`` on your keyboard make sure you already did the step 1 first.
+        * /!\ A Window should appear. 
+> if you see any problem with VS Code relaunch it. 
